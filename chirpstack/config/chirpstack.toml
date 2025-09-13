@@ -1,0 +1,24 @@
+[postgresql]
+dsn="postgresql://user:password@postgres:5432/chirpstack?sslmode=disable"
+# Make sure the user, password, and database name match your docker-compose.yml
+
+[redis]
+url="redis://redis:6379"
+
+[monitoring]
+# The port used for health checks and metrics
+bind="0.0.0.0:8083"
+
+[api]
+# The port for the external API (gRPC) and web interface (HTTP)
+bind="0.0.0.0:8080"
+# Enable the HTTP web interface
+http_bind="0.0.0.0:8080"
+
+# Enable the admin API (important for initial setup)
+[api.admin]
+bind="0.0.0.0:8080"
+
+# Add database migration settings to handle existing schema
+[postgresql.migrations]
+automigrate=true

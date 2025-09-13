@@ -1,0 +1,13 @@
+{
+    "name": "lora-device-simulator",
+    "version": "1.0.0",
+    "description": "Simulates LoRaWAN devices sending data",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "mqtt": "^4.3.7",
+      "dotenv": "^16.3.1"
+    }
+  }
